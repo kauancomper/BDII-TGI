@@ -1,0 +1,10 @@
+    {% extends "base.html" %}
+    {% block content %}
+    <div class="row">
+        <div class="col">
+        <h1>Bem-vindo à Imobiliária</h1>
+        <p>Imóveis cadastrados: {{ imoveis | length }}</p>
+        <a class="btn btn-primary" href="/imoveis">Ver imóveis</a>
+        </div>
+    </div>
+    {% endblock %}

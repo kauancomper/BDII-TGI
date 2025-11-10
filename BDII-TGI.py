@@ -1,1 +1,0 @@
-print('trabalho de BDII_TGI')

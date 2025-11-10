@@ -1,0 +1,24 @@
+    {% extends "base.html" %}
+    {% block content %}
+    <h2>Consultas Complexas</h2>
+
+    <h4>Média de vendas por corretor (contratos do tipo 'venda')</h4>
+    <table class="table table-sm">
+        <thead><tr><th>Corretor</th><th>Média (R$)</th></tr></thead>
+        <tbody>
+        {% for r in media_por_corretor %}
+            <tr><td>{{ r.corretor }}</td><td>{{ r.media_venda }}</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h4>Imóveis disponíveis por cidade</h4>
+    <table class="table table-sm">
+        <thead><tr><th>Cidade</th><th>Disponíveis</th></tr></thead>
+        <tbody>
+        {% for r in por_cidade %}
+            <tr><td>{{ r.cidade }}</td><td>{{ r.qtd_disponiveis }}</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
